@@ -8,26 +8,22 @@
     tools:context=".MainActivity">
 
     <!-- Tiêu đề ứng dụng -->
-
-    <!-- Ảnh đại diện -->
-
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="1146dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:background="#6200EE"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="@string/app_name"
-        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="#FFFFFF"
+        android:background="#6200EE"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Ảnh đại diện -->
     <ImageView
         android:id="@+id/imgAvatar"
         android:layout_width="100dp"
@@ -55,7 +51,6 @@
         app:layout_constraintTop_toBottomOf="@id/imgAvatar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
     <EditText
         android:id="@+id/edtPhone"
@@ -97,74 +92,67 @@
     </RadioGroup>
 
     <!-- Sở thích -->
-
-    <!-- Spinner chọn địa điểm -->
-
-    <!-- Nút thêm -->
-
-    <!-- Danh sách -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="@string/hobby"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroupGender" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/chkMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="@string/music"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroupGender" />
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/chkSport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/sports"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chkMusic" />
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/chkMusic"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Spinner chọn địa điểm -->
     <Spinner
         android:id="@+id/spinnerLocation"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/chkSport"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chkSport" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Nút thêm -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         android:text="@string/add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerLocation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinnerLocation" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Danh sách -->
     <ListView
         android:id="@+id/listView"
-        android:layout_width="1159dp"
-        android:layout_height="1054dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAdd" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
